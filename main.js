@@ -1,3 +1,6 @@
+import '../css/style.css'
+import {DOMSelectors} from './dom'
+
 /*
 //get a promise
 function greet(name){
@@ -15,7 +18,7 @@ mandy.then((result) => {
 });
 */
 
-const URL =`https://api.quotable.io/random`;
+const URL =``;
 
 async function getData(URL){
     try {
