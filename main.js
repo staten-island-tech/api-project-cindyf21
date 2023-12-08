@@ -1,38 +1,32 @@
 import '../css/style.css'
 import {DOMSelectors} from './dom'
 
-/*
-//get a promise
-function greet(name){
-    const greetPromise = new Promise(function(resolve, reject){
-        resolve(`Hello ${name}`);
-    });
-    return greetPromise;
-}
-const mandy = greet("Mandy");
-
-//handle the promise
-mandy.then((result) => {
-    //putting data into HTML
-    console.log(result);
-});
-*/
 
 const URL =``;
 
-async function getData(URL){
-    try {
-        //requesting a response REST API's 
-        const response = await fetch(URL);
-        if(response.status != 200){
-            throw new Error(response.statusText);
-        }
-        //convert response to JSON
-        const data = await response.json();
-        document.querySelector("h1").textContent = data.content;
-    } catch (error) {
-        console.log(error, "Uh Oh");
-        document.querySelector("h1").textContent = "Ahh no";
-    }
+// async function getData(URL){
+//     try {
+//         //requesting a response REST API's 
+//         const response = await fetch(URL);
+//         if(response.status != 200){
+//             throw new Error(response.statusText);
+//         }
+//         //convert response to JSON
+//         const data = await response.json();
+//         document.querySelector("h1").textContent = data.content;
+//     } catch (error) {
+//         console.log(error, "Uh Oh");
+//         document.querySelector("h1").textContent = "Ahh no";
+//     }
+// }
+// getData(URL);
+
+async function getData() {
+    let response = await fetch(
+        ""
+    );
+    let data = await response.json();
+    console.log(data);
+    data.results.forEach(() => console.log());
 }
-getData(URL);
+getData();
