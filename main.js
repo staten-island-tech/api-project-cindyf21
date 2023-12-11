@@ -1,32 +1,13 @@
-import '../css/style.css'
-import {DOMSelectors} from './dom'
 
 
-const URL =``;
+const URL =`https://emojihub.yurace.pro/api/random`;
 
-// async function getData(URL){
-//     try {
-//         //requesting a response REST API's 
-//         const response = await fetch(URL);
-//         if(response.status != 200){
-//             throw new Error(response.statusText);
-//         }
-//         //convert response to JSON
-//         const data = await response.json();
-//         document.querySelector("h1").textContent = data.content;
-//     } catch (error) {
-//         console.log(error, "Uh Oh");
-//         document.querySelector("h1").textContent = "Ahh no";
-//     }
-// }
-// getData(URL);
-
-async function getData() {
-    let response = await fetch(
-        ""
-    );
+async function getData(URL) {
+    let response = await fetch(URL);
     let data = await response.json();
     console.log(data);
-    data.results.forEach(() => console.log());
+    document.querySelector('h1').insertAdjacentHTML(
+        'afterbegin',`<div><h1> ${data.name} ${data.htmlCode} </h1></div`
+    )
 }
-getData();
+getData(URL);
