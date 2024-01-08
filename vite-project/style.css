@@ -18,10 +18,11 @@ body {
   
 .btn {
     padding: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     margin: 0.5rem;
     font-size: 1.2rem;
+    font-weight: bold;
     background-color: rgb(186, 224, 255);
 }
   
